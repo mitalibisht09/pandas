@@ -67,3 +67,11 @@ df = pd.DataFrame({
 })
 
 df["Marks"]
+
+df[["Name","Marks"]]
+
+#selecting first row
+df.iloc[0]
+
+df.iloc[1,2]
+df.loc[1,"Marks"]
