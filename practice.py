@@ -75,3 +75,25 @@ df.iloc[0]
 
 df.iloc[1,2]
 df.loc[1,"Marks"]
+
+df = pd.DataFrame({
+     "Name":["Rahul","Priya,"Aman","Neha"],
+     "Aman":[20,21,19,22],
+    "Marks":[85,92,78,95]
+})
+
+#write a pandas code to select students whose Marks are greater than 85
+df[df["Marks"]>85]
+
+df[(df["Age"]>=21) & (df["Marks"]>85)]
+df[(df["Marks"]>90)] | 9(df["Age"]<20)]
+
+df[df["Name"]].isin(["Rahul","Neha"])]
+
+df[df["Marks"].between(80,95)]
+
+#Sorting
+df.sort_values("Marks",ascending=False)
+
+#TOP 2 students
+df.sort_values("Marks",ascending=False).head(2)
