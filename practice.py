@@ -97,3 +97,34 @@ df.sort_values("Marks",ascending=False)
 
 #TOP 2 students
 df.sort_values("Marks",ascending=False).head(2)
+
+#data transformation
+df["Passed"]=df["Marks"].apply(lambda x : "Yes" if x>=80 
+        else "No")
+
+#how to know missing value
+df.isnull.sum()
+
+#if i want to replace null value with 80
+df["Marks"]=df["Marks"].fillna(80)
+
+#which function would you use to remove duplicates rows?
+df.drop_duplicates()
+
+
+#which command shows he data type of every column?
+df.dtypes
+
+#which command gives a summary of the DataFrame,including;
+df.info()
+
+#==================================================
+#GroupBy begins
+
+#you want to find the average salary of each department
+df.groupby("Department")["salary"].mean()
+
+df.groupby("Department")["Salary"].sum()
+
+df.groupby("Department")["salary"].agg(["min","max","mean"])
+
