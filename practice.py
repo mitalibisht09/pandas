@@ -128,3 +128,16 @@ df.groupby("Department")["Salary"].sum()
 
 df.groupby("Department")["salary"].agg(["min","max","mean"])
 
+
+df.groupby(["Department", "Gender"])["Salary"].mean()
+
+df["Departments"].value_counts()
+
+df["Depatment"].unique()
+
+
+#===================================================================================================================
+#common data-cleaning task
+df.rename(columns={"Marks":"Score"})
+
+df.dropna()
