@@ -141,3 +141,26 @@ df["Depatment"].unique()
 df.rename(columns={"Marks":"Score"})
 
 df.dropna()
+
+#changing datatype
+df["Age"]=df["Age"].astype(int)
+
+#string cleaning
+df["Name"] = df["Name"].str.strip()
+
+
+#string strandalization
+df["Name"]=df["Name"].str.upper()
+
+df[df["Name"].str.contains("Ra")]
+
+df["Revenue"]=df["Price"]*df["Quantity"]
+
+df["Total_With_Tax"] =df["Revenue"]+(df["Revenue"]*0.18)
+
+
+#how to combine dataframes
+pd.concat([df1,df2])
+
+df=pd.merge(employees,salary,on="Employee_ID")
+
